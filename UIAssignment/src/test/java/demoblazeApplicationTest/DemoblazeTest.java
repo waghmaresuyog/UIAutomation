@@ -1,7 +1,6 @@
-package zooplaApplicationTest;
+package demoblazeApplicationTest;
 
 import browser.Driver;
-import config.GetUrl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -16,10 +15,10 @@ import java.time.Duration;
 
 import static config.GetUrl.commonUrl;
 
-public class ZooplaTest {
+public class DemoblazeTest {
     WebDriver driver;
     WebDriverWait wait;
-    private static Logger log = Logger.getLogger(ZooplaTest.class);
+    private static Logger log = Logger.getLogger(DemoblazeTest.class);
 
     @Parameters("browser")
     @BeforeTest
@@ -40,7 +39,8 @@ public class ZooplaTest {
     }
 
     @AfterTest
-    public void Close() {
+    public void Close() throws InterruptedException {
+        Thread.sleep(3000);
         log.info("Broswer Close");
         driver.quit();
     }
