@@ -2,9 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Suite" parallel="none">
+    <listeners>
+        <listener class-name="utilites.Listener"></listener>
+
+    </listeners>
     <test name="ChromeTest">
         <parameter name="browser" value="chrome">
         </parameter>
+
         <classes>
             <class name="demoblazeApplicationTest.DemoblazeTest">
             </class>
